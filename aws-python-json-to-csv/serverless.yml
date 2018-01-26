@@ -1,0 +1,29 @@
+service: aws-python-json-to-csv
+
+plugins:
+  - serverless-python-requirements
+
+package:
+  exclude:
+  - venv/**
+
+custom:
+  pythonRequirements:
+    dockerizePip: non-linux
+
+provider:
+  name: aws
+  runtime: python3.6
+
+functions:
+  hello:
+    handler: handler.main
+    events:
+      - s3:
+          bucket: my-bucket
+          event: s3:ObjectCreated:*
+          rules:
+            - suffix: .json
+
+
+
