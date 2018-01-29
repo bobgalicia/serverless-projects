@@ -3,5 +3,6 @@ This Lambda Function convert a new created json file to csv in the same AWS S3 b
 in your AWS S3 bucket.
 
 CLI tool to generate new json files
+https://github.com/bobgalicia/serverless-projects/tree/master/cli-tool-sh
 It is provided a CLI tool in order to generate and copy to S3 bucket a example json file, to force this Lambda Function run.
 It is no necessary to run this tool, you can copy your own json file to your S3 bucket.
